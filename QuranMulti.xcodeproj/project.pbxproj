@@ -19,6 +19,8 @@
 		A9525F2C27B769BD0035ED29 /* SuratListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F2B27B769BD0035ED29 /* SuratListView.swift */; };
 		A9525F2D27B769CA0035ED29 /* SuratListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F2B27B769BD0035ED29 /* SuratListView.swift */; };
 		A9525F2E27B76C5E0035ED29 /* QuranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F2927B7663A0035ED29 /* QuranModel.swift */; };
+		A9525F3327B76EB30035ED29 /* SuratDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F3227B76EB30035ED29 /* SuratDetailView.swift */; };
+		A9525F3427B76EB30035ED29 /* SuratDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F3227B76EB30035ED29 /* SuratDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		A9525F2027B765280035ED29 /* QuranMulti_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuranMulti_macOS.entitlements; sourceTree = "<group>"; };
 		A9525F2927B7663A0035ED29 /* QuranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranModel.swift; sourceTree = "<group>"; };
 		A9525F2B27B769BD0035ED29 /* SuratListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratListView.swift; sourceTree = "<group>"; };
+		A9525F3227B76EB30035ED29 /* SuratDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A9525F2B27B769BD0035ED29 /* SuratListView.swift */,
+				A9525F3227B76EB30035ED29 /* SuratDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9525F2C27B769BD0035ED29 /* SuratListView.swift in Sources */,
+				A9525F3327B76EB30035ED29 /* SuratDetailView.swift in Sources */,
 				A9525F0827B764ED0035ED29 /* ContentView.swift in Sources */,
 				A9525F2A27B7663A0035ED29 /* QuranModel.swift in Sources */,
 				A9525F0627B764ED0035ED29 /* QuranMulti_iOSApp.swift in Sources */,
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9525F1A27B765240035ED29 /* ContentView.swift in Sources */,
+				A9525F3427B76EB30035ED29 /* SuratDetailView.swift in Sources */,
 				A9525F1827B765240035ED29 /* QuranMulti_macOSApp.swift in Sources */,
 				A9525F2D27B769CA0035ED29 /* SuratListView.swift in Sources */,
 				A9525F2E27B76C5E0035ED29 /* QuranModel.swift in Sources */,

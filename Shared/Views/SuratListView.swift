@@ -12,14 +12,22 @@ struct SuratListView: View {
     
     var body: some View {
         List(surats) { surat in
-            HStack {
-                Text("\(surat.nomor)")
-                VStack(alignment: .leading) {
-                    Text(surat.nama_latin)
-                    Text(surat.arti)
-                }
-                Text(surat.nama)
-            }
+            NavigationLink(
+                destination: SuratDetailView(detailSurat: SuratDetailModel.dummy()),
+                label: {
+                    HStack(spacing: 15) {
+                        Text("\(surat.nomor)")
+                        VStack(alignment: .leading) {
+                            Text(surat.nama_latin)
+                            HStack {
+                                Text(surat.arti)
+                                Text("(\(surat.jumlah_ayat))")
+                            }
+                        }
+                        Text(surat.nama)
+                        Spacer()
+                    }.padding(6)
+                })
         }
         .navigationTitle("Quran")
     }
