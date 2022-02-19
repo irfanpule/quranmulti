@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum NavigationItem {
+  case quran
+  case bookmarks
+}
+
 // api yang digunakan https://equran.id/apidev
 struct SuratModel: Identifiable {
     var id = UUID()

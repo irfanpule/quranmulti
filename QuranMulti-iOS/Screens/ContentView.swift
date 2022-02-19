@@ -9,8 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            SuratListView(surats: SuratModel.dummy())
+        TabView {
+            NavigationView {
+                SuratListView(surats: SuratModel.dummy())
+            }
+                .tabItem {Label("Qur'an", systemImage: "book.fill")}
+                .tag(NavigationItem.quran)
+            
+            BookmartListView(bookmarks: BookmarkModel.dummy())
+                .tabItem {
+                    Label("Bookmarks", systemImage: "bookmark.fill")
+                }
+                .tag(NavigationItem.bookmarks)
         }
     }
 }
