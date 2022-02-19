@@ -31,6 +31,7 @@ struct SuratListView: View {
                 })
         }
         .navigationTitle("Quran")
+        .frame(minWidth: 280)
     }
 }
 

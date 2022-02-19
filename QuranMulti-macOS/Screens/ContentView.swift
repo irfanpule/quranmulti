@@ -9,10 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            SuratListView(surats: SuratModel.dummy())
-                .frame(minWidth: 300)
-        }
+        SuratListViewer()
     }
 }
 
