@@ -19,9 +19,10 @@ struct SuratDetailView: View {
             List(detailSurat.ayat) { ayat in
                 HStack {
                     Text("\(ayat.nomor)")
-                    VStack {
-                        Text(ayat.ar)
-                        Text(ayat.idn)
+                    VStack(alignment: .trailing) {
+                        Text(ayat.ar).multilineTextAlignment(.trailing).lineLimit(50)
+                        Text(ayat.idn).multilineTextAlignment(.leading).lineLimit(50)
+                        Spacer()
                     }
                 }
             }

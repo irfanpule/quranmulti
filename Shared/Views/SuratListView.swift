@@ -24,9 +24,10 @@ struct SuratListView: View {
                                 Text("(\(surat.jumlah_ayat))")
                             }
                         }
-                        Text(surat.nama)
+                        Text(surat.nama).multilineTextAlignment(.trailing)
                         Spacer()
-                    }.padding(6)
+                    }
+                    .padding(6)
                 })
         }
         .navigationTitle("Quran")
@@ -36,5 +37,6 @@ struct SuratListView: View {
 struct SuratListView_Previews: PreviewProvider {
     static var previews: some View {
         SuratListView(surats: SuratModel.dummy())
+            .preferredColorScheme(.dark)
     }
 }
