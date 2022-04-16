@@ -25,4 +25,22 @@ class APIService {
         }
         .resume()
     }
+    
+    func getAyat(nomor_surat: Int, completion: @escaping (SuratDetailModel) -> ()) {
+        guard let url = URL(string: "https://equran.id/api/surat/\(nomor_surat)") else {return}
+        
+        URLSession.shared.dataTask(with: url) { (data, response , error) in
+            do {
+                let suratDetail = try JSONDecoder().decode(SuratDetailModel.self, from: data!)
+                print(suratDetail)
+                DispatchQueue.main.async {
+                    completion(suratDetail)
+                }
+            }
+            catch {
+                print("JSONSerialization error:", error)
+            }
+        }
+        .resume()
+    }
 }

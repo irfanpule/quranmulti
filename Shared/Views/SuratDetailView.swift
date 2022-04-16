@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct SuratDetailView: View {
-    let detailSurat: SuratDetailModel
+    @State var surat: SuratModel
+    @State var detailSurat: SuratDetailModel = SuratDetailModel(ayat: [], status: true)
     
     var body: some View {
         VStack {
             
-            Text(detailSurat.surat.nama_latin)
-            Text(detailSurat.surat.nama)
+            Text(surat.nama_latin)
+            Text(surat.nama)
             
-            List(detailSurat.ayat) { ayat in
+            List(detailSurat.ayat, id: \.nomor) { ayat in
                 HStack {
                     Text("\(ayat.nomor)")
                     VStack(alignment: .trailing) {
@@ -26,13 +27,18 @@ struct SuratDetailView: View {
                     }
                 }
             }
+            .onAppear {
+                APIService().getAyat(nomor_surat: surat.nomor) { suratDetail in
+                    self.detailSurat = suratDetail
+                }
+            }
         }
-        .navigationTitle(detailSurat.surat.nama_latin)
+        .navigationTitle(surat.nama_latin)
     }
 }
 
 struct SuratDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SuratDetailView(detailSurat: SuratDetailModel.dummy())
+        SuratDetailView(surat: SuratModel.dummy()[0], detailSurat: SuratDetailModel.dummy())
     }
 }

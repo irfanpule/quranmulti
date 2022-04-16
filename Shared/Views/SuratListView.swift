@@ -13,7 +13,7 @@ struct SuratListView: View {
     var body: some View {
         List(surats, id: \.nomor) { surat in
             NavigationLink(
-                destination: SuratDetailView(detailSurat: SuratDetailModel.dummy()),
+                destination: SuratDetailView(surat: surat),
                 label: {
                     HStack(spacing: 15) {
                         Text("\(surat.nomor)")

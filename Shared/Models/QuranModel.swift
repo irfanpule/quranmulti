@@ -24,8 +24,7 @@ struct SuratModel: Codable {
     var audio: String
 }
 
-struct AyatModel: Identifiable {
-    var id = UUID()
+struct AyatModel: Codable {
     var nomor: Int
     var ar: String
     var tr: String
@@ -38,9 +37,7 @@ struct TafsirModel: Identifiable {
     var tafsir: String
 }
 
-struct SuratDetailModel: Identifiable {
-    var id = UUID()
-    var surat: SuratModel
+struct SuratDetailModel: Codable {
     var ayat: [AyatModel]
     var status: Bool
 }
@@ -66,9 +63,8 @@ extension AyatModel {
 
 extension SuratDetailModel {
     static func dummy() -> SuratDetailModel {
-        let surat = SuratModel.dummy()[0]
         let ayats = AyatModel.dummy()
-        let detailSurat = SuratDetailModel(surat: surat, ayat: ayats, status: true)
+        let detailSurat = SuratDetailModel(ayat: ayats, status: true)
         return detailSurat
     }
 }
