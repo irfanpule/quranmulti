@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SuratDetailView: View {
+    @State var mp3Play = false
     @State var surat: SuratModel
     @State var detailSurat: SuratDetailModel = SuratDetailModel(ayat: [], status: true)
+    @StateObject private var soundManager = SoundManager()
     
     var body: some View {
         VStack {
@@ -25,6 +27,20 @@ struct SuratDetailView: View {
                 APIService().getAyat(nomor_surat: surat.nomor) { suratDetail in
                     self.detailSurat = suratDetail
                 }
+            }
+        }
+        .toolbar {
+            Button(action: {
+                soundManager.playSound(sound: surat.audio)
+                mp3Play.toggle()
+                
+                if mp3Play {
+                    soundManager.audioPlayer?.play()
+                } else {
+                    soundManager.audioPlayer?.pause()
+                }
+            }) {
+                Image(systemName: mp3Play ? "pause.circle.fill": "play.circle.fill")
             }
         }
         #if os(iOS)
