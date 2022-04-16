@@ -31,7 +31,7 @@ struct SuratListViewer: View {
           tag: NavigationItem.bookmarks,
           selection: $selection
         ) {
-          Label("Bookmarks", systemImage: "bookmark.fill")
+          Label("Markah", systemImage: "bookmark.fill")
         }
         .tag(NavigationItem.bookmarks)
       }

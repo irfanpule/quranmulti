@@ -18,7 +18,7 @@ struct ContentView: View {
             
             BookmartListView(bookmarks: BookmarkModel.dummy())
                 .tabItem {
-                    Label("Bookmarks", systemImage: "bookmark.fill")
+                    Label("Markah", systemImage: "bookmark.fill")
                 }
                 .tag(NavigationItem.bookmarks)
         }

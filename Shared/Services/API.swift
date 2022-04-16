@@ -7,6 +7,7 @@
 
 import Foundation
 
+// api yang digunakan https://equran.id/apidev
 class APIService {
     func getSurat(completion: @escaping ([SuratModel]) -> ()) {
         guard let url = URL(string: "https://equran.id/api/surat") else {return}

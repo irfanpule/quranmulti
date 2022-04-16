@@ -15,19 +15,8 @@ struct SuratListView: View {
             NavigationLink(
                 destination: SuratDetailView(surat: surat),
                 label: {
-                    HStack(spacing: 15) {
-                        Text("\(surat.nomor)")
-                        VStack(alignment: .leading) {
-                            Text(surat.nama_latin)
-                            HStack {
-                                Text(surat.arti)
-                                Text("(\(surat.jumlah_ayat))")
-                            }
-                        }
-                        Text(surat.nama).multilineTextAlignment(.trailing)
-                        Spacer()
-                    }
-                    .padding(6)
+                    SuratCardView(surat: surat)
+                        .listRowBackground(Theme.orange.mainColor)
                 })
         }
         .navigationTitle("Quran")
@@ -43,6 +32,5 @@ struct SuratListView: View {
 struct SuratListView_Previews: PreviewProvider {
     static var previews: some View {
         SuratListView(surats: SuratModel.dummy())
-            .preferredColorScheme(.dark)
     }
 }

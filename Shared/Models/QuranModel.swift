@@ -12,7 +12,6 @@ enum NavigationItem {
   case bookmarks
 }
 
-// api yang digunakan https://equran.id/apidev
 struct SuratModel: Codable {
     var nomor: Int
     var nama: String
