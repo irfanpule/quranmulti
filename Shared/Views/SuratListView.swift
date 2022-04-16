@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SuratListView: View {
-    let surats: [SuratModel]
+    @State var surats: [SuratModel] = []
     
     var body: some View {
-        List(surats) { surat in
+        List(surats, id: \.nomor) { surat in
             NavigationLink(
                 destination: SuratDetailView(detailSurat: SuratDetailModel.dummy()),
                 label: {
@@ -32,6 +32,11 @@ struct SuratListView: View {
         }
         .navigationTitle("Quran")
         .frame(minWidth: 280)
+        .onAppear {
+            APIService().getSurat { surats in
+                self.surats = surats
+            }
+        }
     }
 }
 

@@ -21,6 +21,7 @@
 		A9525F2E27B76C5E0035ED29 /* QuranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F2927B7663A0035ED29 /* QuranModel.swift */; };
 		A9525F3327B76EB30035ED29 /* SuratDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F3227B76EB30035ED29 /* SuratDetailView.swift */; };
 		A9525F3427B76EB30035ED29 /* SuratDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F3227B76EB30035ED29 /* SuratDetailView.swift */; };
+		A9628579280A7EB50027D0E0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9628578280A7EB50027D0E0 /* API.swift */; };
 		A9D7DBC827C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
 		A9D7DBC927C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
 		A9D7DBCB27C0EA3C00620B50 /* BookmartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBCA27C0EA3C00620B50 /* BookmartListView.swift */; };
@@ -43,6 +44,7 @@
 		A9525F2927B7663A0035ED29 /* QuranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranModel.swift; sourceTree = "<group>"; };
 		A9525F2B27B769BD0035ED29 /* SuratListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratListView.swift; sourceTree = "<group>"; };
 		A9525F3227B76EB30035ED29 /* SuratDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratDetailView.swift; sourceTree = "<group>"; };
+		A9628578280A7EB50027D0E0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		A9D7DBCA27C0EA3C00620B50 /* BookmartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmartListView.swift; sourceTree = "<group>"; };
 		A9D7DBCD27C0EE7C00620B50 /* SuratListViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratListViewer.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		A9525F2427B7653F0035ED29 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A9628577280A7EA60027D0E0 /* Services */,
 				A9525F2627B7655D0035ED29 /* Views */,
 				A9525F2527B765530035ED29 /* Models */,
 			);
@@ -167,6 +170,14 @@
 				A9525F1927B765240035ED29 /* ContentView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		A9628577280A7EA60027D0E0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A9628578280A7EB50027D0E0 /* API.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 				A9525F2A27B7663A0035ED29 /* QuranModel.swift in Sources */,
 				A9525F0627B764ED0035ED29 /* QuranMulti_iOSApp.swift in Sources */,
 				A9D7DBC827C0E94800620B50 /* BookmarkModel.swift in Sources */,
+				A9628579280A7EB50027D0E0 /* API.swift in Sources */,
 				A9D7DBCB27C0EA3C00620B50 /* BookmartListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

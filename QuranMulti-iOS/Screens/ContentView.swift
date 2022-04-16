@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationView {
-                SuratListView(surats: SuratModel.dummy())
+                SuratListView()
             }
                 .tabItem {Label("Qur'an", systemImage: "book.fill")}
                 .tag(NavigationItem.quran)
