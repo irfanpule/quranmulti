@@ -16,7 +16,6 @@ struct SuratListView: View {
                 destination: SuratDetailView(surat: surat),
                 label: {
                     SuratCardView(surat: surat)
-                        .listRowBackground(Theme.orange.mainColor)
                 })
         }
         .navigationTitle("Quran")

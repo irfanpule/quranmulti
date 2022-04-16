@@ -18,14 +18,7 @@ struct SuratDetailView: View {
             Text(surat.nama)
             
             List(detailSurat.ayat, id: \.nomor) { ayat in
-                HStack {
-                    Text("\(ayat.nomor)")
-                    VStack(alignment: .trailing) {
-                        Text(ayat.ar).multilineTextAlignment(.trailing).lineLimit(50)
-                        Text(ayat.idn).multilineTextAlignment(.leading).lineLimit(50)
-                        Spacer()
-                    }
-                }
+                AyatCardView(ayat: ayat)
             }
             .onAppear {
                 APIService().getAyat(nomor_surat: surat.nomor) { suratDetail in
