@@ -13,8 +13,9 @@ struct SuratDetailView: View {
     
     var body: some View {
         VStack {
-            
-            Text(surat.nama_latin)
+            #if os(macOS)
+                Text(surat.nama_latin)
+            #endif
             Text(surat.nama)
             
             List(detailSurat.ayat, id: \.nomor) { ayat in
@@ -26,7 +27,11 @@ struct SuratDetailView: View {
                 }
             }
         }
-        .navigationTitle(surat.nama_latin)
+        #if os(iOS)
+            .navigationBarTitle(surat.nama_latin, displayMode: .inline)
+        #else
+            .navigationTitle(surat.nama_latin)
+        #endif
     }
 }
 

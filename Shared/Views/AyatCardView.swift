@@ -17,13 +17,22 @@ struct AyatCardView: View {
                     .font(.caption)
                 Text(ayat.ar)
                     .multilineTextAlignment(.trailing)
+                    .lineSpacing(4)
+                    #if os(macOS)
+                    .font(.system(size: 24))
+                    #else
+                    .font(.body)
+                    #endif
             }
-            Spacer(minLength: 20)
+            Spacer(minLength: 15)
             HStack {
                 Text(ayat.idn)
                 Spacer()
             }
             .font(.caption)
+            #if os(macOS)
+                Divider()
+            #endif
         }
         .padding()
     }

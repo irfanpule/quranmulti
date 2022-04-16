@@ -21,6 +21,9 @@ struct SuratCardView: View {
                 Text(surat.nama)
             }
             .font(.caption)
+            #if os(macOS)
+                Divider()
+            #endif
         }
         .padding()
     }
