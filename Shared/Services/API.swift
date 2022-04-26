@@ -15,7 +15,6 @@ class APIService {
         URLSession.shared.dataTask(with: url) { (data, response , error) in
             do {
                 let surats = try JSONDecoder().decode([SuratModel].self, from: data!)
-                print(surats)
                 DispatchQueue.main.async {
                     completion(surats)
                 }
@@ -33,7 +32,6 @@ class APIService {
         URLSession.shared.dataTask(with: url) { (data, response , error) in
             do {
                 let suratDetail = try JSONDecoder().decode(SuratDetailModel.self, from: data!)
-                print(suratDetail)
                 DispatchQueue.main.async {
                     completion(suratDetail)
                 }
