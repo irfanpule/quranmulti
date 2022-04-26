@@ -42,4 +42,21 @@ class APIService {
         }
         .resume()
     }
+    
+    func getTafsir(nomor_surat: Int, completion: @escaping (TafsirDetailModel) -> ()) {
+        guard let url = URL(string: "https://equran.id/api/tafsir/\(nomor_surat)") else {return}
+        
+        URLSession.shared.dataTask(with: url) { (data, response , error) in
+            do {
+                let tafsir = try JSONDecoder().decode(TafsirDetailModel.self, from: data!)
+                DispatchQueue.main.async {
+                    completion(tafsir)
+                }
+            }
+            catch {
+                print("JSONSerialization error:", error)
+            }
+        }
+        .resume()
+    }
 }

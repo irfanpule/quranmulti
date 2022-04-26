@@ -30,14 +30,20 @@ struct AyatModel: Codable {
     var idn: String
 }
 
-struct TafsirModel: Identifiable {
-    var id = UUID()
+struct TafsirModel: Codable {
+    var id: Int
+    var surah: Int
     var ayat: Int
     var tafsir: String
 }
 
 struct SuratDetailModel: Codable {
     var ayat: [AyatModel]
+    var status: Bool
+}
+
+struct TafsirDetailModel: Codable {
+    var tafsir: [TafsirModel]
     var status: Bool
 }
 
@@ -56,6 +62,15 @@ extension AyatModel {
             AyatModel(nomor: 1, ar: "اِذَا جَاۤءَ نَصْرُ اللّٰهِ وَالْفَتْحُۙ", tr: "i<u>dzaa</u> j<u>aa</u>-a na<u>sh</u>ru <strong>al</strong>l<u>aa</u>hi wa<strong>a</strong>lfat<u>h</u><strong>u</strong>", idn: "Apabila telah datang pertolongan Allah dan kemenangan,"),
             AyatModel(nomor: 2, ar: "وَرَاَيْتَ النَّاسَ يَدْخُلُوْنَ فِيْ دِيْنِ اللّٰهِ اَفْوَاجًاۙ", tr: "wara-ayta <strong>al</strong>nn<u>aa</u>sa yadkhuluuna fii diini <strong>al</strong>l<u>aa</u>hi afw<u>aa</u>j<u>aa</u><strong>n</strong>", idn: "dan engkau melihat manusia berbondong-bondong masuk agama Allah,"),
             AyatModel(nomor: 3, ar: "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُۗ اِنَّهٗ كَانَ تَوَّابًا ࣖ", tr: "fasabbi<u>h</u> bi<u>h</u>amdi rabbika wa<strong>i</strong>staghfirhu innahu k<u>aa</u>na taww<u>aa</u>b<u>aa</u><strong>n</strong>", idn: "maka bertasbihlah dalam dengan Tuhanmu dan mohonlah ampunan kepada-Nya. Sungguh, Dia Maha Penerima tobat.")
+        ]
+    }
+}
+
+extension TafsirModel {
+    static func dummy() -> [TafsirModel] {
+        return [
+            TafsirModel(id: 1, surah: 1, ayat: 1, tafsir: "Dalam ayat-ayat ini, Allah memerintahkan apa yang harus dilakukan Nabi Muhammad pada saat pembebasan Mekah"),
+            TafsirModel(id: 2, surah: 1, ayat: 2, tafsir: "aitu apabila ia telah melihat pertolongan Allah terhadap agama-Nya telah tiba, dengan kekalahan orang-orang musyrik dan kemenangan di pihak Nabi, dan melihat pula orang-orang masuk agama Allah")
         ]
     }
 }

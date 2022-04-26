@@ -13,6 +13,7 @@ struct SuratDetailView: View {
     @State var detailSurat: SuratDetailModel = SuratDetailModel(ayat: [], status: true)
     @StateObject private var soundManager = SoundManager()
     @State private var isLoading = false
+    @State private var isPresented = false
     
     var body: some View {
         ZStack {
@@ -35,18 +36,35 @@ struct SuratDetailView: View {
             }
         }
         .toolbar {
-            Button(action: {
-                soundManager.playSound(sound: surat.audio)
-                mp3Play.toggle()
-                
-                if mp3Play {
-                    soundManager.audioPlayer?.play()
-                } else {
-                    soundManager.audioPlayer?.pause()
+            HStack {
+                Button(action: {
+                    isPresented.toggle()
+                }) {
+                    Image(systemName: "book.closed.fill")
                 }
-            }) {
-                Image(systemName: mp3Play ? "pause.circle.fill": "play.circle.fill")
+                #if os(iOS)
+                    .fullScreenCover(isPresented: $isPresented) {
+                        TafsirDetailView(surat: self.surat)
+                    }
+                #else
+                    .sheet(isPresented: $isPresented) {
+                        TafsirDetailView(surat: self.surat)
+                    }
+                #endif
+                Button(action: {
+                    soundManager.playSound(sound: surat.audio)
+                    mp3Play.toggle()
+                    
+                    if mp3Play {
+                        soundManager.audioPlayer?.play()
+                    } else {
+                        soundManager.audioPlayer?.pause()
+                    }
+                }) {
+                    Image(systemName: mp3Play ? "pause.circle.fill": "play.circle.fill")
+                }
             }
+
         }
         #if os(iOS)
             .navigationBarTitle(surat.nama_latin, displayMode: .inline)

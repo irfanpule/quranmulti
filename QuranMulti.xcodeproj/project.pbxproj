@@ -34,6 +34,10 @@
 		A96115A7280AAF5200A7E117 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96115A5280AAF5200A7E117 /* SoundManager.swift */; };
 		A96198F62817C8C5003651A2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198F52817C8C5003651A2 /* LoadingView.swift */; };
 		A96198F72817C8C5003651A2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198F52817C8C5003651A2 /* LoadingView.swift */; };
+		A96198F92817CEF1003651A2 /* TafsirDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198F82817CEF1003651A2 /* TafsirDetailView.swift */; };
+		A96198FA2817CEF1003651A2 /* TafsirDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198F82817CEF1003651A2 /* TafsirDetailView.swift */; };
+		A96198FC2817CF5D003651A2 /* TafsirCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198FB2817CF5D003651A2 /* TafsirCardView.swift */; };
+		A96198FD2817CF5D003651A2 /* TafsirCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198FB2817CF5D003651A2 /* TafsirCardView.swift */; };
 		A9628579280A7EB50027D0E0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9628578280A7EB50027D0E0 /* API.swift */; };
 		A9D7DBC827C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
 		A9D7DBC927C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
@@ -63,6 +67,8 @@
 		A96115A2280AA12E00A7E117 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		A96115A5280AAF5200A7E117 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		A96198F52817C8C5003651A2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A96198F82817CEF1003651A2 /* TafsirDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirDetailView.swift; sourceTree = "<group>"; };
+		A96198FB2817CF5D003651A2 /* TafsirCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirCardView.swift; sourceTree = "<group>"; };
 		A9628578280A7EB50027D0E0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		A9D7DBCA27C0EA3C00620B50 /* BookmartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmartListView.swift; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				A961159C280A922600A7E117 /* SuratCardView.swift */,
 				A961159F280A9D4300A7E117 /* AyatCardView.swift */,
 				A96198F52817C8C5003651A2 /* LoadingView.swift */,
+				A96198F82817CEF1003651A2 /* TafsirDetailView.swift */,
+				A96198FB2817CF5D003651A2 /* TafsirCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,11 +328,13 @@
 				A96115A6280AAF5200A7E117 /* SoundManager.swift in Sources */,
 				A96198F62817C8C5003651A2 /* LoadingView.swift in Sources */,
 				A961159D280A922600A7E117 /* SuratCardView.swift in Sources */,
+				A96198F92817CEF1003651A2 /* TafsirDetailView.swift in Sources */,
 				A961159A280A91B700A7E117 /* Themes.swift in Sources */,
 				A9525F0627B764ED0035ED29 /* QuranMulti_iOSApp.swift in Sources */,
 				A96115A3280AA12E00A7E117 /* TrailingIconLabelStyle.swift in Sources */,
 				A96115A0280A9D4300A7E117 /* AyatCardView.swift in Sources */,
 				A9D7DBC827C0E94800620B50 /* BookmarkModel.swift in Sources */,
+				A96198FC2817CF5D003651A2 /* TafsirCardView.swift in Sources */,
 				A9628579280A7EB50027D0E0 /* API.swift in Sources */,
 				A9D7DBCB27C0EA3C00620B50 /* BookmartListView.swift in Sources */,
 			);
@@ -340,8 +350,10 @@
 				A961159B280A921700A7E117 /* Themes.swift in Sources */,
 				A9525F2D27B769CA0035ED29 /* SuratListView.swift in Sources */,
 				A96115A7280AAF5200A7E117 /* SoundManager.swift in Sources */,
+				A96198FD2817CF5D003651A2 /* TafsirCardView.swift in Sources */,
 				A96115A1280A9D4300A7E117 /* AyatCardView.swift in Sources */,
 				A9525F2E27B76C5E0035ED29 /* QuranModel.swift in Sources */,
+				A96198FA2817CEF1003651A2 /* TafsirDetailView.swift in Sources */,
 				A96198F72817C8C5003651A2 /* LoadingView.swift in Sources */,
 				A9D7DBCE27C0EE7C00620B50 /* SuratListViewer.swift in Sources */,
 				A96115A4280AA12E00A7E117 /* TrailingIconLabelStyle.swift in Sources */,
