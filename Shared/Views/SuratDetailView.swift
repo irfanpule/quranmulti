@@ -12,21 +12,26 @@ struct SuratDetailView: View {
     @State var surat: SuratModel
     @State var detailSurat: SuratDetailModel = SuratDetailModel(ayat: [], status: true)
     @StateObject private var soundManager = SoundManager()
+    @State private var isLoading = false
     
     var body: some View {
-        VStack {
-            #if os(macOS)
-                Text(surat.nama_latin)
-            #endif
-            Text(surat.nama)
-            
-            List(detailSurat.ayat, id: \.nomor) { ayat in
-                AyatCardView(ayat: ayat)
-            }
-            .onAppear {
-                APIService().getAyat(nomor_surat: surat.nomor) { suratDetail in
-                    self.detailSurat = suratDetail
+        ZStack {
+            VStack {
+                #if os(macOS)
+                    Text(surat.nama_latin)
+                #endif
+                Text(surat.nama)
+                
+                List(detailSurat.ayat, id: \.nomor) { ayat in
+                    AyatCardView(ayat: ayat)
                 }
+                .onAppear {
+                    getData()
+                }
+            }
+            
+            if isLoading {
+                LoadingView()
             }
         }
         .toolbar {
@@ -48,6 +53,14 @@ struct SuratDetailView: View {
         #else
             .navigationTitle(surat.nama_latin)
         #endif
+    }
+    
+    func getData() {
+        isLoading = true
+        APIService().getAyat(nomor_surat: surat.nomor) { suratDetail in
+            self.detailSurat = suratDetail
+            isLoading = false
+        }
     }
 }
 
