@@ -32,7 +32,9 @@ struct SuratListView: View {
             }
             
         }
+        #if os(iOS)
         .searchable(text: $searchQuery, prompt: "Cari dengan nama surat")
+        #endif
     }
     
     func getData() {
