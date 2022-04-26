@@ -40,6 +40,9 @@ struct TafsirDetailView: View {
                 LoadingView()
             }
         }
+        #if os(macOS)
+            .frame(minWidth: 600, minHeight: 700)
+        #endif
     }
     
     func getData() {
