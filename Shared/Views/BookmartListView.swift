@@ -22,13 +22,6 @@ struct BookmartListView: View {
         .onAppear {
             bookmarks = coreDM.getAllBookmark()
         }
-        .toolbar {
-            Button(action: {
-                coreDM.bookmarkSave()
-            }) {
-                Text("simpan")
-            }
-        }
     }
 }
 

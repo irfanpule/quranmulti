@@ -20,12 +20,12 @@ class CoreDataManager {
         }
     }
     
-    func bookmarkSave() {
+    func bookmarkSave(surat: SuratModel, ayat: AyatModel) {
         let bookmark = BookMark(context: persistenContainer.viewContext)
-        bookmark.nama_surat_ar = "arabnya"
-        bookmark.nama_surat_idn = "Al - Fatihah"
-        bookmark.nomor_ayat = 3
-        bookmark.nomor_surat = 1
+        bookmark.nama_surat_ar = surat.nama
+        bookmark.nama_surat_idn = surat.nama_latin
+        bookmark.nomor_ayat = Int64(ayat.nomor)
+        bookmark.nomor_surat = Int64(surat.nomor)
         
         do {
             try persistenContainer.viewContext.save()

@@ -14,6 +14,12 @@ struct SuratDetailView: View {
     @StateObject private var soundManager = SoundManager()
     @State private var isLoading = false
     @State private var isPresented = false
+    @State private var showingOptions = false
+    @State private var selection = ""
+    @State private var saveBookmarkConfirmation = ""
+    @State private var selectAyat: AyatModel? = nil
+    
+    let coreDM = CoreDataManager()
     
     var body: some View {
         ZStack {
@@ -25,6 +31,11 @@ struct SuratDetailView: View {
                 
                 List(detailSurat.ayat, id: \.nomor) { ayat in
                     AyatCardView(ayat: ayat)
+                        .onTapGesture {}.onLongPressGesture(minimumDuration: 0.5) {
+                            saveBookmarkConfirmation = "ayat \(ayat.nomor) surat \(surat.nama_latin)"
+                            selectAyat = ayat
+                            showingOptions = true
+                        }
                 }
                 .onAppear {
                     getData()
@@ -71,6 +82,11 @@ struct SuratDetailView: View {
         #else
             .navigationTitle(surat.nama_latin)
         #endif
+            .confirmationDialog("Ingin tambah \(saveBookmarkConfirmation) ke markah?", isPresented: $showingOptions, titleVisibility: .visible) {
+            Button("Yes", role: .destructive) {
+                coreDM.bookmarkSave(surat: surat, ayat: selectAyat!)
+            }
+        }
     }
     
     func getData() {
