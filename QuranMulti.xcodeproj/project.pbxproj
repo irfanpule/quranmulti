@@ -39,6 +39,10 @@
 		A96198FC2817CF5D003651A2 /* TafsirCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198FB2817CF5D003651A2 /* TafsirCardView.swift */; };
 		A96198FD2817CF5D003651A2 /* TafsirCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96198FB2817CF5D003651A2 /* TafsirCardView.swift */; };
 		A9628579280A7EB50027D0E0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9628578280A7EB50027D0E0 /* API.swift */; };
+		A9A21D0B281D181000A55CD2 /* CoreModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9A21D09281D181000A55CD2 /* CoreModelData.xcdatamodeld */; };
+		A9A21D0C281D181000A55CD2 /* CoreModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9A21D09281D181000A55CD2 /* CoreModelData.xcdatamodeld */; };
+		A9A21D0E281D186900A55CD2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A21D0D281D186900A55CD2 /* CoreDataManager.swift */; };
+		A9A21D0F281D186900A55CD2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A21D0D281D186900A55CD2 /* CoreDataManager.swift */; };
 		A9D7DBC827C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
 		A9D7DBC927C0E94800620B50 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */; };
 		A9D7DBCB27C0EA3C00620B50 /* BookmartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7DBCA27C0EA3C00620B50 /* BookmartListView.swift */; };
@@ -70,6 +74,8 @@
 		A96198F82817CEF1003651A2 /* TafsirDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirDetailView.swift; sourceTree = "<group>"; };
 		A96198FB2817CF5D003651A2 /* TafsirCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafsirCardView.swift; sourceTree = "<group>"; };
 		A9628578280A7EB50027D0E0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A9A21D0A281D181000A55CD2 /* CoreModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModelData.xcdatamodel; sourceTree = "<group>"; };
+		A9A21D0D281D186900A55CD2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A9D7DBC727C0E94800620B50 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
 		A9D7DBCA27C0EA3C00620B50 /* BookmartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmartListView.swift; sourceTree = "<group>"; };
 		A9D7DBCD27C0EE7C00620B50 /* SuratListViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuratListViewer.swift; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				A9628577280A7EA60027D0E0 /* Services */,
 				A9525F2627B7655D0035ED29 /* Views */,
 				A9525F2527B765530035ED29 /* Models */,
+				A9A21D09281D181000A55CD2 /* CoreModelData.xcdatamodeld */,
+				A9A21D0D281D186900A55CD2 /* CoreDataManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -322,10 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9525F2C27B769BD0035ED29 /* SuratListView.swift in Sources */,
+				A9A21D0B281D181000A55CD2 /* CoreModelData.xcdatamodeld in Sources */,
 				A9525F3327B76EB30035ED29 /* SuratDetailView.swift in Sources */,
 				A9525F0827B764ED0035ED29 /* ContentView.swift in Sources */,
 				A9525F2A27B7663A0035ED29 /* QuranModel.swift in Sources */,
 				A96115A6280AAF5200A7E117 /* SoundManager.swift in Sources */,
+				A9A21D0E281D186900A55CD2 /* CoreDataManager.swift in Sources */,
 				A96198F62817C8C5003651A2 /* LoadingView.swift in Sources */,
 				A961159D280A922600A7E117 /* SuratCardView.swift in Sources */,
 				A96198F92817CEF1003651A2 /* TafsirDetailView.swift in Sources */,
@@ -346,6 +356,8 @@
 			files = (
 				A9525F1A27B765240035ED29 /* ContentView.swift in Sources */,
 				A9525F3427B76EB30035ED29 /* SuratDetailView.swift in Sources */,
+				A9A21D0C281D181000A55CD2 /* CoreModelData.xcdatamodeld in Sources */,
+				A9A21D0F281D186900A55CD2 /* CoreDataManager.swift in Sources */,
 				A9525F1827B765240035ED29 /* QuranMulti_macOSApp.swift in Sources */,
 				A961159B280A921700A7E117 /* Themes.swift in Sources */,
 				A9525F2D27B769CA0035ED29 /* SuratListView.swift in Sources */,
@@ -729,6 +741,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9A21D09281D181000A55CD2 /* CoreModelData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9A21D0A281D181000A55CD2 /* CoreModelData.xcdatamodel */,
+			);
+			currentVersion = A9A21D0A281D181000A55CD2 /* CoreModelData.xcdatamodel */;
+			path = CoreModelData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A9525EF827B764850035ED29 /* Project object */;
 }
