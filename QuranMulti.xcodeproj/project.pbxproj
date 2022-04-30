@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A93F6E9B281D30C2005DDE9B /* BookmarkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F6E9A281D30C2005DDE9B /* BookmarkCardView.swift */; };
+		A93F6E9C281D30C2005DDE9B /* BookmarkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F6E9A281D30C2005DDE9B /* BookmarkCardView.swift */; };
 		A9525F0627B764ED0035ED29 /* QuranMulti_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F0527B764ED0035ED29 /* QuranMulti_iOSApp.swift */; };
 		A9525F0827B764ED0035ED29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9525F0727B764ED0035ED29 /* ContentView.swift */; };
 		A9525F0A27B764F20035ED29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9525F0927B764F20035ED29 /* Assets.xcassets */; };
@@ -51,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A93F6E9A281D30C2005DDE9B /* BookmarkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCardView.swift; sourceTree = "<group>"; };
 		A9525F0227B764ED0035ED29 /* QuranMulti-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuranMulti-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9525F0527B764ED0035ED29 /* QuranMulti_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranMulti_iOSApp.swift; sourceTree = "<group>"; };
 		A9525F0727B764ED0035ED29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				A96198F52817C8C5003651A2 /* LoadingView.swift */,
 				A96198F82817CEF1003651A2 /* TafsirDetailView.swift */,
 				A96198FB2817CF5D003651A2 /* TafsirCardView.swift */,
+				A93F6E9A281D30C2005DDE9B /* BookmarkCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +342,7 @@
 				A9A21D0E281D186900A55CD2 /* CoreDataManager.swift in Sources */,
 				A96198F62817C8C5003651A2 /* LoadingView.swift in Sources */,
 				A961159D280A922600A7E117 /* SuratCardView.swift in Sources */,
+				A93F6E9B281D30C2005DDE9B /* BookmarkCardView.swift in Sources */,
 				A96198F92817CEF1003651A2 /* TafsirDetailView.swift in Sources */,
 				A961159A280A91B700A7E117 /* Themes.swift in Sources */,
 				A9525F0627B764ED0035ED29 /* QuranMulti_iOSApp.swift in Sources */,
@@ -354,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93F6E9C281D30C2005DDE9B /* BookmarkCardView.swift in Sources */,
 				A9525F1A27B765240035ED29 /* ContentView.swift in Sources */,
 				A9525F3427B76EB30035ED29 /* SuratDetailView.swift in Sources */,
 				A9A21D0C281D181000A55CD2 /* CoreModelData.xcdatamodeld in Sources */,

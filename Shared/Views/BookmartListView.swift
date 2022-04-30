@@ -14,10 +14,7 @@ struct BookmartListView: View {
     var body: some View {
         List {
             ForEach(bookmarks, id:\.self) { bookmark in
-                HStack {
-                    Text(bookmark.nama_surat_idn ?? "")
-                    Text("ayat: \(bookmark.nomor_ayat)")
-                }
+                BookmarkCardView(bookmark: bookmark)
             }
             .onDelete(perform: { indexSet in
                 indexSet.forEach { index in
