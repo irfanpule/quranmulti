@@ -16,7 +16,9 @@ struct ContentView: View {
                 .tabItem {Label("Qur'an", systemImage: "book.fill")}
                 .tag(NavigationItem.quran)
             
-            BookmartListView(bookmarks: BookmarkModel.dummy())
+            NavigationView {
+                BookmartListView()
+            }
                 .tabItem {
                     Label("Markah", systemImage: "bookmark.fill")
                 }

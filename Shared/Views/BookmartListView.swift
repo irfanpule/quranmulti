@@ -8,20 +8,35 @@
 import SwiftUI
 
 struct BookmartListView: View {
-    let bookmarks: [BookmarkModel]
+    let coreDM = CoreDataManager()
+    @State private var bookmarks: [BookMark] = [BookMark]()
+    
     var body: some View {
-        List(bookmarks) { bookmark in
-            HStack {
-                Text(bookmark.surat.nama_latin)
-                Text("ayat: \(bookmark.ayat.nomor)")
+        List {
+            ForEach(bookmarks, id:\.self) { bookmark in
+                BookmarkCardView(bookmark: bookmark)
             }
+            .onDelete(perform: { indexSet in
+                indexSet.forEach { index in
+                    let bookmark = bookmarks[index]
+                    coreDM.bookmarkDelete(bookmark: bookmark)
+                    reloadList()
+                }
+            })
         }
-        .navigationTitle("Bookmark")
+        .navigationTitle("Markah")
+        .onAppear {
+            reloadList()
+        }
+    }
+    
+    private func reloadList() {
+        bookmarks = coreDM.getAllBookmark()
     }
 }
 
 struct BookmartListView_Previews: PreviewProvider {
     static var previews: some View {
-        BookmartListView(bookmarks: BookmarkModel.dummy())
+        BookmartListView()
     }
 }

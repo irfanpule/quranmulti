@@ -27,7 +27,7 @@ struct SuratListViewer: View {
         }
         .tag(NavigationItem.quran)
         NavigationLink(
-            destination: BookmartListView(bookmarks: BookmarkModel.dummy()),
+            destination: BookmartListView(),
           tag: NavigationItem.bookmarks,
           selection: $selection
         ) {
