@@ -12,16 +12,29 @@ struct BookmartListView: View {
     @State private var bookmarks: [BookMark] = [BookMark]()
     
     var body: some View {
-        List(bookmarks, id:\.self) { bookmark in
-            HStack {
-                Text(bookmark.nama_surat_idn ?? "")
-                Text("ayat: \(bookmark.nomor_ayat)")
+        List {
+            ForEach(bookmarks, id:\.self) { bookmark in
+                HStack {
+                    Text(bookmark.nama_surat_idn ?? "")
+                    Text("ayat: \(bookmark.nomor_ayat)")
+                }
             }
+            .onDelete(perform: { indexSet in
+                indexSet.forEach { index in
+                    let bookmark = bookmarks[index]
+                    coreDM.bookmarkDelete(bookmark: bookmark)
+                    reloadList()
+                }
+            })
         }
         .navigationTitle("Markah")
         .onAppear {
-            bookmarks = coreDM.getAllBookmark()
+            reloadList()
         }
+    }
+    
+    private func reloadList() {
+        bookmarks = coreDM.getAllBookmark()
     }
 }
 

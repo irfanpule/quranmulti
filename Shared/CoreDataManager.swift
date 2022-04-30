@@ -34,6 +34,17 @@ class CoreDataManager {
         }
     }
     
+    func bookmarkDelete(bookmark: BookMark) {
+        persistenContainer.viewContext.delete(bookmark)
+        
+        do {
+            try persistenContainer.viewContext.save()
+        } catch {
+            persistenContainer.viewContext.rollback()
+            print("failed to delete contenxt: \(error)")
+        }
+    }
+    
     func getAllBookmark() -> [BookMark] {
         let fetchRequest: NSFetchRequest<BookMark> = BookMark.fetchRequest()
         
