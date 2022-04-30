@@ -12,7 +12,7 @@ class CoreDataManager {
     let persistenContainer: NSPersistentContainer
     
     init() {
-        persistenContainer = NSPersistentContainer(name: "BookMark")
+        persistenContainer = NSPersistentContainer(name: "CoreModelData")
         persistenContainer.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Core Data store failed: \(error.localizedDescription)")

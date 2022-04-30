@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="BookMark" representedClassName=".BookMark" syncable="YES" codeGenerationType="class">
+    <entity name="BookMark" representedClassName="BookMark" syncable="YES" codeGenerationType="class">
         <attribute name="nama_surat_ar" optional="YES" attributeType="String"/>
         <attribute name="nama_surat_idn" optional="YES" attributeType="String"/>
         <attribute name="nomor_ayat" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
